@@ -1,0 +1,163 @@
+/* Общие стили для форм авторизации и регистрации */
+.auth-container {
+    max-width: 28rem;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(26, 26, 26, 0.8);
+    border-radius: 0.625rem;
+    box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.auth-container h2 {
+    font-size: 1.75rem;
+    color: #b6cce2;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-size: 0.875rem;
+    color: #b6cce2;
+    font-weight: 500;
+}
+
+.form-group input {
+    padding: 0.75rem 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0.25rem;
+    color: #ffffff;
+    font-size: 0.9375rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #1a936f;
+    outline: none;
+}
+
+.form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.auth-btn {
+    width: 100%;
+    padding: 0.875rem;
+    background-color: #1a936f;
+    color: #000000;
+    border: none;
+    border-radius: 0.25rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
+.auth-btn:hover {
+    background-color: transparent;
+    color: #1a936f;
+    border: 1px solid #1a936f;
+}
+
+.auth-link {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #737382;
+    font-size: 0.875rem;
+}
+
+.auth-link a {
+    color: #1a936f;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.auth-link a:hover {
+    color: #b6cce2;
+    text-decoration: underline;
+}
+
+.error {
+    color: #ff6b6b;
+    font-size: 0.875rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    background: rgba(255, 107, 107, 0.1);
+    border-radius: 0.25rem;
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .auth-container {
+        padding: 1.5rem;
+        margin: 1.5rem auto;
+    }
+    .auth-container h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .auth-container {
+        padding: 1.25rem;
+        margin: 1rem auto;
+        width: 95%;
+    }
+    .form-group input {
+        padding: 0.625rem 0.875rem;
+    }
+    .auth-btn {
+        padding: 0.75rem;
+    }
+}
+/* Стили для кнопки "Перейти на главную" */
+.go-home-btn-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.go-home-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--secondary);
+  color: var(--primary);
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.go-home-btn:hover {
+  background-color: transparent;
+  color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.go-home-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}

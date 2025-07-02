@@ -1,0 +1,160 @@
+/* Footer.module.css */
+
+/* Базовые стили футера */
+footer {
+  background-color: var(--primary);
+  color: var(--light);
+  padding: 2.5rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-content1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* Стили для первого блока */
+.pervii-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.logo {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--light);
+  text-decoration: none;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: var(--secondary);
+}
+
+.pervii-block h3 {
+  font-size: 0.875rem;
+  color: var(--gray);
+  margin-bottom: 1.5rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Стили для второго блока */
+.vtoroi-block {
+  display: flex;
+  justify-content: center;
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.nav li a {
+  color: var(--light);
+  text-decoration: none;
+  font-size: 0.9375rem;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav li a:hover {
+  color: var(--secondary);
+}
+
+.nav li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--secondary);
+  transition: width 0.3s ease;
+}
+
+.nav li a:hover::after {
+  width: 100%;
+}
+
+/* Стили для третьего блока */
+.tretii-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.tretii-block h2 {
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: var(--light-gray);
+}
+
+/* Адаптивные стили */
+@media (max-width: 62rem) { /* 992px */
+  .footer-content1 {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .tretii-block {
+    grid-column: span 2;
+    align-items: center;
+    text-align: center;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 48rem) { /* 768px */
+  .footer-content1 {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .pervii-block, 
+  .vtoroi-block,
+  .tretii-block {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .tretii-block {
+    grid-column: span 1;
+    margin-top: 0;
+  }
+  
+  .nav {
+    align-items: center;
+  }
+}
+
+@media (max-width: 36rem) { /* 576px */
+  footer {
+    padding: 1.5rem 0;
+  }
+  
+  .footer-content1 {
+    padding: 0 1rem;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+  }
+  
+  .tretii-block h2 {
+    font-size: 0.875rem;
+  }
+}

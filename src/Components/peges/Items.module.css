@@ -1,0 +1,221 @@
+/* Контейнер для карточек товаров */
+.items-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Основные стили для карточек товара */
+.item {
+    width: 20rem;
+    margin-bottom: 50px;
+    background-color: #000000;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 60px;
+    border-radius: 9px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(26, 146, 111, 0.2);
+    border-color: #1a936f;
+}
+
+/* Стили для изображений в карточках */
+.item img {
+    padding: 1rem;
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    transition: transform 500ms ease;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Эффект при наведении на изображение */
+.item img:hover {
+    transform: scale(1.05);
+}
+
+/* Стили для текстовых элементов в карточках */
+.item h2 {
+    margin: 20px;
+    color: #ffffff;
+    font-size: 1.1rem;
+    min-height: 3rem;
+    width: 100%;
+    padding: 0 10px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.item p {
+    margin: 0 20px 20px;
+    color: #737382;
+    font-size: 0.9rem;
+    min-height: 2.5rem;
+    width: 100%;
+    padding: 0 10px;
+}
+
+/* Стили для цены в карточках */
+.item b {
+    display: block;
+    margin: 0 20px 20px;
+    color: #1a936f;
+    font-weight: 600;
+    font-size: 1.1rem;
+    width: 100%;
+    padding: 0 10px;
+}
+
+/* Стили для кнопки "Добавить в корзину" */
+.add-to-cart {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1a936f;
+    width: 150px;
+    height: 31px;
+    text-align: center;
+    line-height: 30px;
+    color: #000000;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+}
+
+/* Эффект при наведении на кнопку */
+.add-to-cart:hover {
+    background-color: transparent;
+    color: #1a936f;
+    border: 1px solid #1a936f;
+    transform: translateX(-50%) scale(1.01) translateY(-5px);
+}
+
+/* Адаптивные стили */
+@media (max-width: 992px) {
+    .item {
+        width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 768px) {
+    .items-container {
+        justify-content: center;
+    }
+    .item {
+        width: 100%;
+        max-width: 350px;
+        margin-bottom: 30px;
+    }
+    .item img {
+        height: 180px;
+    }
+}
+
+@media (max-width: 576px) {
+    .add-to-cart {
+        width: 120px;
+        height: 28px;
+        line-height: 28px;
+        font-size: 12px;
+    }
+}
+.items-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  .item {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  }
+  
+  .item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--gray-200);
+  }
+  
+  .item h2 {
+    padding: 1rem 1rem 0;
+    font-size: 1.2rem;
+    color: var(--black);
+  }
+  
+  .item p {
+    padding: 0 1rem;
+    color: var(--gray-700);
+    font-size: 0.9rem;
+  }
+  
+  .item b {
+    display: block;
+    padding: 1rem;
+    font-size: 1.1rem;
+    color: var(--black);
+  }
+  
+  .add-to-cart {
+    display: block;
+    width: calc(100% - 2rem);
+    margin: 0 1rem 1rem;
+    padding: 0.7rem;
+    background-color: var(--black);
+    color: var(--white);
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .add-to-cart:hover {
+    background-color: var(--gray-800);
+  }
+  
+  @media (max-width: 768px) {
+    .items-container {
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1.5rem;
+      padding: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .items-container {
+      grid-template-columns: 1fr;
+    }
+  }

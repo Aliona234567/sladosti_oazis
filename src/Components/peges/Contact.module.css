@@ -1,0 +1,75 @@
+/* Стили для Contact.module.css */
+.contact1 {
+    width: 94rem; /* 1280px */
+    margin: 2rem auto; /* 20px */
+}
+
+.contact1 h1 {
+    top: 0.1875rem; /* 3px */
+    font-size: 1.875rem; /* 30px */
+    margin: 1.25rem; /* 20px */
+    text-align: center;
+}
+
+.contact1 h2 {
+    font-size: 1.25rem; /* 20px */
+    margin: 0.625rem; /* 10px */
+}
+
+.karta {
+    margin: center;
+    background-image: url(.//Components/img/kart.jpg);
+    width: 80%;
+    height: 31.25rem; /* 500px */
+    margin-bottom: 1.25rem; /* 20px */
+}
+
+.dva {
+    grid-area: 1 / 2;
+    margin: 1.25rem; /* 20px */
+}
+
+.odin {
+    margin: 1.25rem; /* 20px */
+    grid-area: 1 / 1;
+}
+
+.recvizit {
+    margin-bottom: 90%;
+}
+
+.contac2 {
+    display: grid;
+    top: 0.625rem; /* 10px */
+}
+.contactContainer {
+    width: 94rem;
+    margin: 2rem auto;
+}
+
+.contactTitle {
+    font-size: 1.875rem;
+    margin: 1.25rem;
+    text-align: center;
+}
+
+.contactSubtitle {
+    font-size: 1.25rem;
+    margin: 0.625rem;
+}
+
+.map {
+    width: 80%;
+    height: 31.25rem;
+    margin-bottom: 1.25rem;
+    background-image: url(.//Components/img/kart.jpg);
+}
+
+.contactInfo {
+    display: grid;
+    margin: 1.25rem;
+}
+
+.requisites {
+    margin-bottom: 90%;
+}

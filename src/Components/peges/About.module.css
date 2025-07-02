@@ -1,0 +1,143 @@
+.about {
+    background-color: var(--gray-100);
+    padding: 4rem 2rem;
+    border-radius: 20px;
+    margin: 2rem;
+  }
+  
+  .about-title {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  
+  @media (max-width: 768px) {
+    .about-content {
+      grid-template-columns: 1fr;
+    }
+  }
+  /* Стили для About.module.css */
+.about {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 2rem;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+.verh {
+  width: 100%;
+}
+
+/* .qwerty {
+  background-image: url(./Components/img/qwe.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 24.375rem;
+  float: right;
+  margin: 1.25rem 0;
+  border-radius: 0.625rem;
+} */
+
+.about-title {
+  margin: 1rem 0;
+}
+
+.fs26 {
+  font-size: 1.625rem;
+}
+
+.ls1 {
+  letter-spacing: 1px;
+}
+
+.fs17 {
+  font-size: 1.0625rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.abn {
+  text-align: center;
+  margin: 1rem 0;
+  font-size: 2rem;
+  color: #1a936f;
+}
+
+.create-line {
+  width: 100%;
+  height: 1px;
+  background-color: #000000;
+  margin: 1.5rem 0;
+}
+
+.text {
+  width: 100%;
+  margin: 1.25rem 0;
+}
+
+.text h3 {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.aboutList {
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.aboutList li {
+  margin-bottom: 0.75rem;
+}
+
+.aboutList h4 {
+  font-weight: 500;
+  font-size: 1.0625rem;
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+  .about {
+    padding: 1rem;
+    grid-template-rows: auto auto;
+  }
+
+  .qwerty {
+    height: 18rem;
+    margin: 1rem 0;
+  }
+
+  .fs26 {
+    font-size: 1.5rem;
+  }
+
+  .abn {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .qwerty {
+    height: 14rem;
+  }
+
+  .fs26 {
+    font-size: 1.25rem;
+  }
+
+  .abn {
+    font-size: 1.5rem;
+  }
+
+  .create-line {
+    margin: 1rem 0;
+  }
+}
